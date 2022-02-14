@@ -1,0 +1,41 @@
+// Button
+<html>
+<head>
+  <title>Simple Document API example</title>
+  <script>
+    function setBodyAttr(attr, value) {
+      if (document.body) document.body[attr] = value;
+      else throw new Error("no support");
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <form>
+      <p><b><code>text</code></b></p>
+      <select onchange="setBodyAttr('text',
+        this.options[this.selectedIndex].value);">
+        <option value="blue">blue</option>
+        <option value="purple">purple</option>
+      </select>
+      <p><b><code>bgColor</code></b></p>
+      <select onchange="setBodyAttr('bgColor',
+        this.options[this.selectedIndex].value);">
+        <option value="black">black</option>
+        <option value="yellow">yellow</option>
+      </select>
+      <p><b><code>link</code></b></p>
+      <select onchange="setBodyAttr('link',
+        this.options[this.selectedIndex].value);">
+        <option value="red">red</option>
+        <option value="white">white</option>
+      </select>
+      <small>
+        <a href="https://i.natgeofe.com/n/6490d605-b11a-4919-963e-f1e6f3c0d4b6/sumatran-tiger-thumbnail-nationalgeographic_1456276.jpg?w=1200" id="surpise">
+          (surprise photo)
+        </a>
+      </small>
+    </form>
+  </div>
+</body>
+</html>
